@@ -1,0 +1,396 @@
+/* ==========================================
+ABOUT HERO
+========================================== */
+
+.about{
+min-height:100vh;
+display:flex;
+align-items:center;
+}
+
+.about-hero-grid{
+display:grid;
+grid-template-columns:minmax(0,1fr) 420px;
+gap:6rem;
+align-items:center;
+}
+
+.about-hero-title{
+font-size:clamp(2rem,6vw,4.5rem);
+font-weight:800;
+line-height:1;
+letter-spacing:-0.06em;
+max-width:700px;
+}
+
+.about-hero-lead{
+margin-top:2rem;
+max-width:700px;
+font-size:1.15rem;
+line-height:1.6;
+color:var(--text);
+}
+
+.about-hero-description{
+margin-top:1rem;
+max-width:650px;
+color:var(--muted);
+font-size:0.95rem;
+line-height:1.6;
+}
+
+.about-pillars{
+display:flex;
+flex-wrap:wrap;
+gap:1.5rem;
+margin-top:2rem;
+font-weight:600;
+}
+
+.about-pillars a{
+position:relative;
+}
+
+.about-pillars a:not(:last-child)::after{
+content:"·";
+margin-left:1.5rem;
+color:var(--accent);
+}
+
+.hero-socials{
+margin-top:1rem;
+}
+
+.about-image-column{
+width:100%;
+}
+
+.about-image{
+aspect-ratio:4/5;
+overflow:hidden;
+border-radius:24px;
+background:#f3f3f3;
+}
+
+.about-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.about-highlights{
+margin-top:2rem;
+border-top:1px solid var(--border);
+}
+
+.highlight-item{
+padding:1.4rem 0;
+border-bottom:1px solid var(--border);
+font-size:1.15rem;
+font-weight:600;
+transition:.3s ease;
+}
+
+.highlight-item:hover{
+padding-left:.5rem;
+color:var(--accent);
+}
+
+/* ==========================================
+JOURNEY
+========================================== */
+.journey-intro{
+max-width:720px;
+margin-top:1.5rem;
+margin-bottom:5rem;
+color:var(--muted);
+font-size:0.95rem;
+line-height:1.8;
+}
+
+.journey-list{
+border-top:1px solid var(--border);
+margin-bottom: 2rem;
+}
+
+.journey-item{
+display:grid;
+grid-template-columns:
+120px
+minmax(280px,1.2fr)
+minmax(280px,1fr);
+gap:3rem;
+padding:1.8rem 0;
+border-bottom:1px solid var(--border);
+align-items:start;
+transition:.3s ease;
+}
+
+.journey-item:hover{
+transform:translateX(10px);
+}
+
+.journey-number{
+color:var(--accent);
+font-size:2.5rem;
+font-weight:700;
+line-height:1;
+}
+
+.journey-year{
+display:block;
+margin-bottom:.75rem;
+color:var(--muted);
+font-size:.95rem;
+letter-spacing:.05em;
+}
+
+.journey-heading{
+font-size:clamp(0.95rem,2vw,1.5rem);
+line-height:1.2;
+}
+
+.journey-description{
+color:var(--muted);
+line-height:1.5;
+font-size: 0.95rem;
+}
+
+/* ==========================================
+SKILLS
+========================================== */
+
+.skills-stack{
+    margin-top:5rem;
+    border-top:1px solid var(--border);
+}
+
+.skill-row{
+    padding:2.5rem 0;
+    border-bottom:1px solid var(--border);
+    transition:.3s ease;
+}
+
+.skill-row:hover{
+    padding-left:.75rem;
+}
+
+.skill-heading{
+    font-size:1.5rem;
+    font-weight:700;
+    margin-bottom:1.25rem;
+    transition:.3s ease;
+}
+
+.skill-row:hover .skill-heading{
+    color:var(--accent);
+}
+
+.skill-tags{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:.75rem;
+}
+
+.skill-tags .tag{
+    transition:.3s ease;
+}
+
+.skill-tags .tag:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+PROCESS
+========================================== */
+
+.process-timeline{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:2rem;
+    margin-top:5rem;
+}
+
+.process-timeline::before{
+    content:"";
+    position:absolute;
+    top:14px;
+    left:0;
+    right:0;
+    height:1px;
+    background:var(--border);
+}
+
+.process-node{
+
+    position:relative;
+}
+
+.process-node span{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:28px;
+    height:28px;
+
+    border-radius:999px;
+
+    background:var(--accent);
+
+    color:#fff;
+
+    font-size:.75rem;
+    font-weight:700;
+
+    margin-bottom:1.5rem;
+
+    position:relative;
+    z-index:2;
+}
+
+.process-node h3{
+    font-size:clamp(1rem,2vw,1.6rem);
+    font-weight:700;
+    line-height:1.1;
+}
+
+@media(max-width:768px){
+
+    .process-timeline{
+
+        grid-template-columns:1fr;
+
+        gap:2rem;
+    }
+
+    .process-timeline::before{
+
+        display:none;
+    }
+
+}
+
+@media(max-width:768px){
+
+.process{
+
+    padding:7rem 0;
+}
+
+.process-statement{
+
+    font-size:3rem;
+}
+
+}
+
+
+/* ==========================================
+CONTACT CTA
+========================================== */
+
+.contact-cta{
+padding:10rem 0;
+border-top:1px solid var(--border);
+text-align:center;
+}
+
+.contact-cta h2{
+font-size:clamp(3rem,6vw,5rem);
+line-height:1;
+margin-bottom:1.5rem;
+}
+
+.contact-cta p{
+max-width:650px;
+margin:0 auto 2rem;
+color:var(--muted);
+}
+
+/* ==========================================
+TABLET
+========================================== */
+
+@media(max-width:1024px){
+
+.about-hero-grid{
+    grid-template-columns:1fr;
+    gap:4rem;
+}
+
+.about-image-column{
+    max-width:500px;
+}
+
+.journey-item{
+    grid-template-columns:80px 1fr;
+}
+
+.journey-description{
+    grid-column:2;
+}
+.process-flow{
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .process-flow::before{
+        display:none;
+    }
+
+}
+
+/* ==========================================
+MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.about{
+    padding:7rem 0 5rem;
+}
+
+.about-hero-title{
+    font-size:3.5rem;
+}
+
+.about-hero-lead{
+    font-size:1.05rem;
+}
+
+.about-pillars{
+    gap:.75rem;
+}
+
+.services,
+.journey,
+.skills,
+.process{
+    padding:6rem 0;
+}
+
+.journey-item{
+    grid-template-columns:1fr;
+    gap:1rem;
+}
+
+.journey-description{
+    grid-column:auto;
+}
+
+.skills-grid{
+    grid-template-columns:1fr;
+    gap:3rem;
+}
+
+.contact-cta h2{
+    font-size:3rem;
+}
+}
